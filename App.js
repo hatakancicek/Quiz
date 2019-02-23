@@ -6,14 +6,14 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 import { firebaseConfig } from './Config';
-import Loading from './pages/Loading';
+import RootSwitch from './navigators/RootSwitch';
 
 firebase.initializeApp(firebaseConfig);
 
 export default class App extends React.Component {
   render() {
     return (
-      <Loading />
+      <RootSwitch />
     );
   };
 };

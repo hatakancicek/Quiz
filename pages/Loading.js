@@ -9,11 +9,11 @@ import { Font } from 'expo';
 import React, { Component } from 'react';
 
 import { colors } from '../Config.js';
+import splash from '../assets/splash.png';
 
 const { background, primary } = colors;
 const { height, width } = Dimensions.get('window');
 
-const splash = require('../assets/splash.png');
 
 const styles = StyleSheet.create({
   root: {
@@ -72,6 +72,6 @@ export default class Loading extends Component {
           style={styles.indicator} 
         />
       </View>
-    )
-  }
-}
+    );
+  };
+};
