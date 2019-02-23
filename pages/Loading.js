@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import { 
   View, 
   Image, 
@@ -6,11 +5,13 @@ import {
   Dimensions,
   ActivityIndicator, 
 } from 'react-native';
+import { Font } from 'expo';
+import React, { Component } from 'react';
 
 import { colors } from '../Config.js';
 
 const { background, primary } = colors;
-const {height, width} = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
 
 const splash = require('../assets/splash.png');
 
@@ -35,6 +36,29 @@ const styles = StyleSheet.create({
 });
 
 export default class Loading extends Component {
+  state = {
+    loadedFonts: false,
+  };
+
+  loadFonts = async _ => {
+    await Font.loadAsync({
+      'Quicksand-Bold': require('../assets/fonts/Quicksand-Bold.ttf'),
+      'Quicksand-Light': require('../assets/fonts/Quicksand-Light.ttf'),
+      'Quicksand-Medium': require('../assets/fonts/Quicksand-Medium.ttf'),
+      'Quicksand-Regular': require('../assets/fonts/Quicksand-Regular.ttf'),
+    });
+
+    this.setState({
+      loadedFonts: true,
+    });
+  };
+
+  componentDidMount() {
+    const { loadFonts } = this;
+
+    loadFonts();
+  };
+
   render() {
     return (
       <View style={styles.root} >
