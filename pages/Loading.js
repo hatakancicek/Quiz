@@ -14,7 +14,6 @@ import splash from '../assets/splash.png';
 const { background, primary } = colors;
 const { height, width } = Dimensions.get('window');
 
-
 const styles = StyleSheet.create({
   root: {
     flex: 1,
@@ -45,12 +44,14 @@ export default class Loading extends Component {
       'Quicksand-Bold': require('../assets/fonts/Quicksand-Bold.ttf'),
       'Quicksand-Light': require('../assets/fonts/Quicksand-Light.ttf'),
       'Quicksand-Medium': require('../assets/fonts/Quicksand-Medium.ttf'),
-      'Quicksand-Regular': require('../assets/fonts/Quicksand-Regular.ttf'),
+      'Quicksand': require('../assets/fonts/Quicksand-Regular.ttf'),
     });
 
     this.setState({
       loadedFonts: true,
     });
+
+    this.props.navigation.navigate("Error");
   };
 
   componentDidMount() {
