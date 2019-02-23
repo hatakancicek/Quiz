@@ -4,6 +4,7 @@ import {
   StyleSheet,
   TouchableOpacity, 
 } from 'react-native';
+import i18n from 'i18n-js';
 import React, { Component } from 'react';
 import { scale } from 'react-native-size-matters';
 
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
     lineHeight: scale(42),
     fontFamily: "Quicksand",
   },
-  desciption: {
+  description: {
     color: "#FFFFFF",
     fontSize: scale(24),
     marginTop: scale(30),
@@ -74,16 +75,14 @@ export default class Error extends Component {
     return (
       <View style={styles.root} >
         <Text style={styles.title} >
-          {errorText}
+          {i18n.t("err_page_title")}
         </Text>
-        <Text style={styles.desciption} >
-          En iyimizin bile başına gelebiliyor. 
-          İnternet bağlantını kontrol edip yeniden dene. 
-          Hatanın devam etmesi durumunda bize bildirebilirsin.
+        <Text style={styles.description} >
+          {i18n.t("err_page_description")}
         </Text>
         <TouchableOpacity style={styles.buttonWrapper} >
           <Text style={styles.buttonText} >
-            YENİDEN DENE
+            {i18n.t("retry")}
           </Text>
         </TouchableOpacity>
       </View>
