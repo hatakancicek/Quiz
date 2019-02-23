@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   description: {
     color: "#FFFFFF",
     fontSize: scale(24),
-    marginTop: scale(30),
+    marginTop: scale(22),
     fontFamily: "Quicksand",
   },
   buttonWrapper: {
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     shadowOpacity: 0.8,
     shadowColor: '#000',
-    marginTop: scale(48),
+    marginTop: scale(40),
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: secondary,
@@ -64,11 +64,6 @@ const styles = StyleSheet.create({
     textShadowOffset: {width: 0, height: 0},
   },
 });
-
-const errorText =
-`Bir 
-hata
-oluştu.`
 
 export default class Error extends Component {
   render() {
