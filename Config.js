@@ -6,3 +6,8 @@ export const firebaseConfig = {
   storageBucket: "",
   messagingSenderId: "911584888367"
 };
+
+export const colors = {
+  background: "#263238",
+  primary: '#0DAFD4',
+};

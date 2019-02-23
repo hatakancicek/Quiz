@@ -6,18 +6,17 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 import { firebaseConfig } from './Config';
+import Loading from './pages/Loading';
 
 firebase.initializeApp(firebaseConfig);
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <Loading />
     );
-  }
-}
+  };
+};
 
 const styles = StyleSheet.create({
   container: {
