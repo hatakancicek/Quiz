@@ -51,7 +51,7 @@ export default class Loading extends Component {
       loadedFonts: true,
     });
 
-    this.props.navigation.navigate("Error");
+    this.props.navigation.navigate("HomeStack");
   };
 
   componentDidMount() {

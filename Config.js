@@ -12,3 +12,7 @@ export const colors = {
   secondary: '#83F9BE',
   primary: '#0DAFD4',
 };
+
+export const AppName = "QuizApp";
+
+export const headerHeight = 55;
