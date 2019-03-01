@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     shadowColor: '#37474F',
     paddingVertical: scale(12),
     backgroundColor: '#FFFFFF',
+    marginHorizontal: scale(10),
     shadowOffset: { width: 0, height: 2 },
   },
   left: {

@@ -15,8 +15,10 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     shadowOpacity: 0.4,
     alignSelf: 'stretch',
+    marginTop: scale(10),
     shadowColor: '#37474F',
     flexDirection: 'column',
+    marginHorizontal: scale(10),
     shadowOffset: { width: 0, height: 2 },
   },
   header: {

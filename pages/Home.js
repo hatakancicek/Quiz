@@ -1,4 +1,5 @@
 import { 
+  View,
   FlatList, 
   StyleSheet,
   ScrollView,
@@ -17,9 +18,12 @@ import mockQuests from '../mocks/Quests';
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    padding: scale(10),
     alignSelf: 'stretch',
     backgroundColor: '#eeeeee',
+  },
+  footer: {
+    height: scale(10),
+    alignSelf: 'stretch',
   },
 });
 
@@ -54,13 +58,14 @@ export default class Home extends Component {
     const { renderQuest } = this;
 
     return (
-      <ScrollView style={styles.root} >
-        <Rewards />
+      <View style={styles.root} >
         <FlatList 
           data={mockQuests}
           renderItem={ renderQuest } 
+          ListHeaderComponent={<Rewards />}
+          ListFooterComponent={<View style={styles.footer} ></View>}
         />
-      </ScrollView>
+      </View>
     );
   };
 };
