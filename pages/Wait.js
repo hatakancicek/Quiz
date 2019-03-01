@@ -58,9 +58,10 @@ export default class Wait extends Component {
           start={Date.now() + 1000 * 60 * 12 + 1000 * 32}
         />
         <UserThumbnail 
-          username="Hüseyin Atakan Çiçek"
-          coins={1200}
+          crowns={2}
           image={god}
+          coins={1200}
+          username="Hüseyin Atakan Çiçek"
         />
       </LinearGradient>
     );

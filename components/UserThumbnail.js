@@ -4,6 +4,9 @@ import SvgUri from 'react-native-svg-uri';
 import { scale } from 'react-native-size-matters';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
+import coin from '../assets/icons/coin.svg';
+import crown from '../assets/icons/crown.svg';
+
 const styles = StyleSheet.create({
   root: {
     marginTop: scale(30),
@@ -50,17 +53,16 @@ const styles = StyleSheet.create({
   },
 });
 
-import coin from '../assets/icons/coin.svg';
-
 export default class UserThumbnail extends Component {
   static propTpes = {
     image: PropTypes.number.isRequired,
     coins: PropTypes.number.isRequired,
+    crowns: PropTypes.number.isRequired,
     username: PropTypes.string.isRequired,
   };
 
   render() {
-    const { image, coins, username } = this.props;
+    const { image, coins, crowns, username } = this.props;
 
     return (
       <View style={styles.root} >
@@ -82,6 +84,17 @@ export default class UserThumbnail extends Component {
               source={coin}
               width={scale(16)}
               height={scale(16)}
+              style={styles.coin}
+            />
+          </View>
+          <View style={styles.userCoinWrapper} >
+            <Text style={styles.coinText} >
+              {crowns}
+            </Text>
+            <SvgUri
+              source={crown}
+              width={scale(18)}
+              height={scale(18)}
               style={styles.coin}
             />
           </View>
