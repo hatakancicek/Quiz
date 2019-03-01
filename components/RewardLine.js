@@ -11,8 +11,8 @@ import crown from '../assets/icons/crown.svg';
 const styles = StyleSheet.create({
   root: {
     marginTop: scale(4),
-    flexDirection: 'row',
     alignItems: 'center',
+    flexDirection: 'row',
   },
   qText: {
     color: '#37474F',
@@ -28,8 +28,8 @@ const styles = StyleSheet.create({
     marginLeft: scale(2),
   },
   crown: {
-    marginRight: scale(6),
     marginTop: scale(-6),
+    marginRight: scale(6),
   },
 });
 
@@ -67,8 +67,8 @@ export default class RewardLine extends Component {
         </Text>
         <SvgUri
           source={coin}
-          width={scale(15)}
-          height={scale(15)}
+          width={scale(13)}
+          height={scale(13)}
           style={styles.coin}
         />
       </View>

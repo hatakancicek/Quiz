@@ -1,11 +1,14 @@
 import i18n from 'i18n-js';
 import { LinearGradient } from 'expo';
 import React, { Component } from 'react';
-import { Text, StyleSheet } from 'react-native';
 import { scale } from 'react-native-size-matters';
+import { Text, StyleSheet } from 'react-native';
 
+
+import god from '../assets/god.jpg';
 import WaitInfo from '../components/WaitInfo';
 import TimeText from '../components/TimeText';
+import UserThumbnail from '../components/UserThumbnail';
 
 const styles = StyleSheet.create({
   root: {
@@ -14,7 +17,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'column',
     justifyContent: 'center',
-    paddingHorizontal: scale(20),
+    paddingHorizontal: scale(30),
   },
   timeText: {
     color: '#FFFFFF',
@@ -54,7 +57,12 @@ export default class Wait extends Component {
           pType={0}
           start={Date.now() + 1000 * 60 * 12 + 1000 * 32}
         />
+        <UserThumbnail 
+          username="Hüseyin Atakan Çiçek"
+          coins={1200}
+          image={god}
+        />
       </LinearGradient>
-    )
-  }
-}
+    );
+  };
+};
