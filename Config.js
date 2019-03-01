@@ -17,3 +17,21 @@ export const colors = {
 export const AppName = "QuizApp";
 
 export const headerHeight = 55;
+
+export const qTypes = [
+  {
+    name: "history",
+    image: require('./assets/icons/history.svg'),
+  },
+];
+
+export const pTypes = [
+  {
+    name: "standart",
+    color: "#2196F3",
+  },
+  {
+    name: "extreme",
+    color: "#9C27B0",
+  },
+]

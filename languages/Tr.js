@@ -8,5 +8,12 @@ oluştu.`,
     + " Hatanın devam etmesi durumunda bize bildirebilirsin.",
   retry: "YENİDEN DENE",
   rewards_title: "Trend Ödüller",
-  see_all: "TÜMÜNÜ GÖR"
+  see_all: "TÜMÜNÜ GÖR",
+  history: "Tarih",
+  standart: "Standart",
+  extreme: "Extrem",
+  today: "Bugün",
+  share: "PAYLAŞ",
+  remind: "Hatırlat",
+  join: "KATIL",
 };

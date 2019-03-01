@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   root: {
     elevation: 1,
     shadowRadius: 2,
-    shadowOpacity: 0.8,
+    shadowOpacity: 0.4,
     alignSelf: 'stretch',
     shadowColor: '#37474F',
     flexDirection: 'column',

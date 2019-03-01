@@ -14,9 +14,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'column',
   },
+  imageWrapper: {
+    elevation: 1,
+    shadowRadius: 2,
+    borderRadius: 4,
+    width: scale(55),
+    height: scale(55),
+    shadowOpacity: 0.4,
+    shadowColor: '#37474F',
+    shadowOffset: { width: 0, height: 2 },
+  },
   image: {
-    width: scale(60),
-    height: scale(60),
+    borderRadius: 4,
+    width: scale(55),
+    height: scale(55),
   },
   name: {
     color: "#37474F",
@@ -25,7 +36,7 @@ const styles = StyleSheet.create({
     fontFamily: "Quicksand-Bold",
   },
   priceWrapper: {
-    marginTop: scale(6),
+    marginTop: scale(4),
     alignSelf: 'stretch',
     alignItems: 'center',
     flexDirection: 'row',
@@ -51,11 +62,13 @@ export default class Rewards extends Component {
 
     return (
       <View style={styles.root} >
-        <Image
-          source={image}
-          style={styles.image}
-          ImageResizeMode="cover"
-        />
+        <View style={styles.imageWrapper} >
+          <Image
+            source={image}
+            style={styles.image}
+            ImageResizeMode="cover"
+          />
+        </View>
         <Text numberOfLines={1} style={styles.name} >
           {name}
         </Text>
@@ -64,8 +77,8 @@ export default class Rewards extends Component {
             {price}
           </Text>
           <SvgUri
-            width={scale(12)}
-            height={scale(12)}
+            width={scale(10)}
+            height={scale(10)}
             source={coin}
           />
         </View>

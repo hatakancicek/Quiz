@@ -8,5 +8,12 @@ occured.`,
     + " If error continues, please let us know.",
   retry: "RETRY",
   rewards_title: "Trending Rewards",
-  see_all: "SEE-ALL"
+  see_all: "SEE-ALL",
+  history: "History",
+  standart: "Standart",
+  extreme: "Extreme",
+  today: "Today",
+  share: "SHARE",
+  remind: "Remind Me",
+  join: "JOIN",
 };

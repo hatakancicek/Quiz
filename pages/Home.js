@@ -1,5 +1,5 @@
 import { 
-  View, 
+  FlatList, 
   StyleSheet,
   ScrollView,
 } from 'react-native';
@@ -10,13 +10,16 @@ import User from '../assets/icons/user.svg';
 import Rewards from '../containers/Rewards';
 import { AppName, headerHeight } from '../Config';
 import HeaderIcon from '../components/HeaderIcon';
+import Quest from '../components/Quest';
 import Calendar from '../assets/icons/calendar.svg';
+import mockQuests from '../mocks/Quests';
 
 const styles = StyleSheet.create({
   root: {
-    alignSelf: 'stretch',
     flex: 1,
     padding: scale(10),
+    alignSelf: 'stretch',
+    backgroundColor: '#eeeeee',
   },
 });
 
@@ -42,10 +45,21 @@ export default class Home extends Component {
         />
   });
 
+  renderQuest = ({item}) => 
+    <Quest  
+      { ...item }
+    />;
+
   render() {
+    const { renderQuest } = this;
+
     return (
       <ScrollView style={styles.root} >
         <Rewards />
+        <FlatList 
+          data={mockQuests}
+          renderItem={ renderQuest } 
+        />
       </ScrollView>
     );
   };
