@@ -16,4 +16,5 @@ occured.`,
   share: "SHARE",
   remind: "Remind Me",
   join: "JOIN",
+  question_index: "%{index} Question: ",
 };

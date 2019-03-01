@@ -16,4 +16,5 @@ oluştu.`,
   share: "PAYLAŞ",
   remind: "Hatırlat",
   join: "KATIL",
+  question_index: "%{index} Soru: ",
 };
