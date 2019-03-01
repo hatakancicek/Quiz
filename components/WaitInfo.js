@@ -6,7 +6,7 @@ import { scale } from 'react-native-size-matters';
 import { Text, View, StyleSheet } from 'react-native';
 
 import { qTypes } from '../Config';
-import PriceLine from './PriceLine';
+import RewardLine from './RewardLine';
 
 const styles = StyleSheet.create({
   root: {
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     paddingVertical: scale(45),
     backgroundColor: '#FFFFFF',
-    paddingHorizontal: scale(20),
+    paddingHorizontal: scale(25),
     justifyContent: 'space-between',
   },
   left: {
@@ -66,10 +66,10 @@ export default class WaitInfo extends Component {
           </Text>
         </View>
         <View style={styles.right} >
-          <PriceLine price={500} index={13} />
+          <RewardLine reward={500} index={13} />
           <View style={styles.divider} />
-          <PriceLine price={200} index={12} />
-          <PriceLine price={100} index={9} />
+          <RewardLine reward={200} index={12} />
+          <RewardLine reward={100} index={9} />
         </View>
       </View>
     );

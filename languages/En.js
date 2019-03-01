@@ -17,4 +17,5 @@ occured.`,
   remind: "Remind Me",
   join: "JOIN",
   question_index: "%{index} Question: ",
+  time_description: "When time is up, contest will begin automaticly.",
 };

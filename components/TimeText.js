@@ -6,9 +6,9 @@ import { scale } from 'react-native-size-matters';
 const styles = StyleSheet.create({
   text: {
     color: '#37474F',
-    width: scale(105),
     fontSize: scale(28),
     textAlign: 'center',
+    minWidth: scale(105),
     fontFamily: 'Quicksand-Bold',
   },
 });
@@ -18,8 +18,14 @@ export default class TimeText extends Component {
     mounted: true,
   };
 
+  static defaultProps = {
+    showHours: true,
+  };
+
   static propTypes = {
     target: PropTypes.number.isRequired,
+    showHours: PropTypes.bool,
+    style: PropTypes.object,
   };
 
   updateTime = _ => {
@@ -52,6 +58,7 @@ export default class TimeText extends Component {
   };
 
   render() {
+    const { showHours, style } = this.props;
     const { remaining } = this.state || 0;
 
     let seconds = Math.floor((remaining % (60 * 1000)) / 1000);
@@ -63,8 +70,11 @@ export default class TimeText extends Component {
     hours = ( hours > 9 ? "" : "0" ) + hours;
 
     return (
-      <Text style={styles.text} >
-        {hours}:{minutes}:{seconds}
+      <Text style={{
+        ...styles.text,
+        ...style,
+      }} >
+        {`${showHours ? hours + ":" : ""}`}{minutes}:{seconds}
       </Text>
     );
   };

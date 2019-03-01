@@ -33,14 +33,14 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class PriceLine extends Component {
+export default class RewardLine extends Component {
   static propTypes = {
-    price: PropTypes.number.isRequired,
+    reward: PropTypes.number.isRequired,
     index: PropTypes.number.isRequired,
   };
 
   render() {
-    const { price, index } = this.props;
+    const { reward, index } = this.props;
 
     return (
       <View style={styles.root} >
@@ -62,7 +62,7 @@ export default class PriceLine extends Component {
             ) 
           }
           <Text style={styles.pText} >
-            { price }
+            { reward }
           </Text>
         </Text>
         <SvgUri
