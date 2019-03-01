@@ -1,11 +1,16 @@
+import { 
+  Text, 
+  StyleSheet, 
+  TouchableOpacity,
+} from 'react-native';
 import i18n from 'i18n-js';
 import { LinearGradient } from 'expo';
 import React, { Component } from 'react';
+import SvgUri from 'react-native-svg-uri';
 import { scale } from 'react-native-size-matters';
-import { Text, StyleSheet } from 'react-native';
-
 
 import god from '../assets/god.jpg';
+import close from '../assets/icons/close.svg';
 import WaitInfo from '../components/WaitInfo';
 import TimeText from '../components/TimeText';
 import UserThumbnail from '../components/UserThumbnail';
@@ -30,6 +35,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     maxWidth: scale(220),
     marginBottom: scale(30),
+  },
+  close: {
+    position: 'absolute',
+    top: scale(30),
+    right: scale(30),
   },
 });
 
@@ -63,6 +73,15 @@ export default class Wait extends Component {
           coins={1200}
           username="Hüseyin Atakan Çiçek"
         />
+        <TouchableOpacity
+          style={styles.close}
+        >
+          <SvgUri
+            width={scale(30)}
+            height={scale(30)}
+            source={close}
+          />
+        </TouchableOpacity>
       </LinearGradient>
     );
   };
