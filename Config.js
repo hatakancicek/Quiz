@@ -11,6 +11,7 @@ export const colors = {
   background: '#263238',
   secondary: '#83F9BE',
   primary: '#0DAFD4',
+  blue: "#2196F3",
 };
 
 export const AppName = "QuizApp";

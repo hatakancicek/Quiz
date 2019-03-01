@@ -7,4 +7,6 @@ oluştu.`,
     + " İnternet bağlantını kontrol edip yeniden dene."
     + " Hatanın devam etmesi durumunda bize bildirebilirsin.",
   retry: "YENİDEN DENE",
+  rewards_title: "Trend Ödüller",
+  see_all: "TÜMÜNÜ GÖR"
 };

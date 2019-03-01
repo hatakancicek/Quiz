@@ -7,4 +7,6 @@ occured.`,
     + " Check your internet connection and try again."
     + " If error continues, please let us know.",
   retry: "RETRY",
+  rewards_title: "Trending Rewards",
+  see_all: "SEE-ALL"
 };
