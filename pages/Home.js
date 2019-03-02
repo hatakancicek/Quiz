@@ -7,13 +7,13 @@ import {
 import React, { Component } from 'react';
 import { scale } from 'react-native-size-matters';
 
+import Quest from '../components/Quest';
+import mockQuests from '../mocks/Quests';
 import User from '../assets/icons/user.svg';
 import Rewards from '../containers/Rewards';
 import { AppName, headerHeight } from '../Config';
 import HeaderIcon from '../components/HeaderIcon';
-import Quest from '../components/Quest';
 import Calendar from '../assets/icons/calendar.svg';
-import mockQuests from '../mocks/Quests';
 
 const styles = StyleSheet.create({
   root: {

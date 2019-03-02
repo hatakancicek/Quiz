@@ -9,7 +9,6 @@ import crown from '../assets/icons/crown.svg';
 
 const styles = StyleSheet.create({
   root: {
-    marginTop: scale(30),
     alignSelf: 'stretch',
     flexDirection: 'row',
     alignItems: 'center',

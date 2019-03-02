@@ -59,7 +59,7 @@ export default class RewardLine extends Component {
               {
                 index: index === 13 ? "" : index + ".",
               }
-            ) 
+            ) + ": " 
           }
           <Text style={styles.pText} >
             { reward }

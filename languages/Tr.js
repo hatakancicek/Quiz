@@ -16,6 +16,7 @@ oluştu.`,
   share: "PAYLAŞ",
   remind: "Hatırlat",
   join: "KATIL",
-  question_index: "%{index} Soru: ",
+  profile: "Profil",
+  question_index: "%{index} Soru",
   time_description: "Yarışma süre dolduğunda otomatik olarak başlayacktır.",
 };

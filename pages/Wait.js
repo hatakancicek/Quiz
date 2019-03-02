@@ -1,5 +1,6 @@
 import { 
   Text, 
+  View,
   StyleSheet, 
   TouchableOpacity,
 } from 'react-native';
@@ -9,7 +10,7 @@ import React, { Component } from 'react';
 import SvgUri from 'react-native-svg-uri';
 import { scale } from 'react-native-size-matters';
 
-import god from '../assets/god.jpg';
+import mockUser from '../mocks/User';
 import close from '../assets/icons/close.svg';
 import WaitInfo from '../components/WaitInfo';
 import TimeText from '../components/TimeText';
@@ -41,6 +42,10 @@ const styles = StyleSheet.create({
     top: scale(30),
     right: scale(30),
   },
+  divider: {
+    height: scale(30),
+    alignSelf: 'center',
+  },
 });
 
 export default class Wait extends Component {
@@ -67,12 +72,8 @@ export default class Wait extends Component {
           pType={0}
           start={Date.now() + 1000 * 60 * 12 + 1000 * 32}
         />
-        <UserThumbnail 
-          crowns={2}
-          image={god}
-          coins={1200}
-          username="Hüseyin Atakan Çiçek"
-        />
+        <View style={styles.divider} />
+        <UserThumbnail { ...mockUser } />
         <TouchableOpacity
           style={styles.close}
         >
