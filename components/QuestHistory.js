@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
   root: {
     elevation: 1,
     shadowRadius: 2,
+    borderRadius: 12,
     shadowOpacity: 0.4,
     flexWrap: 'nowrap',
     alignSelf: 'stretch',
@@ -125,12 +126,7 @@ export default class QuestHistory extends Component {
       ? crown
       : noCrown;
     
-    const qText = i18n.t(
-      "question_index", 
-      {
-        index: index === 13 ? "" : index + ".",
-      }
-    );
+    const qText = i18n.t("question_index", { index: index, }) + ".";
 
     return (
       <View style={styles.root} >

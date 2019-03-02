@@ -1,7 +1,9 @@
 import { 
   Text, 
   View,
+  Platform,
   StyleSheet, 
+  BackHandler,
   TouchableOpacity,
 } from 'react-native';
 import i18n from 'i18n-js';
@@ -51,9 +53,26 @@ const styles = StyleSheet.create({
 export default class Wait extends Component {
   static navigationOptions = {
     header: null,
+    gesturesEnabled: false,
+  };
+
+  componentDidMount() {
+    if(Platform.OS === "android")
+      BackHandler.addEventListener('hardwareBackPress', this.handleBackPress);
+  };
+
+  componentWillUnmount() {
+    if(Platform.OS === "android")
+      BackHandler.removeEventListener('hardwareBackPress', this.handleBackPress);
+  };
+
+  handleBackPress = () => {
+    return true;
   };
 
   render() {
+    const { navigation: { goBack }} = this.props;
+
     return (
       <LinearGradient
         colors={['#2196F3', '#0D47A1']}
@@ -76,6 +95,7 @@ export default class Wait extends Component {
         <UserThumbnail { ...mockUser } />
         <TouchableOpacity
           style={styles.close}
+          onPress={_ => goBack()}
         >
           <SvgUri
             width={scale(30)}

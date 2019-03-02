@@ -6,9 +6,9 @@ import Profile from '../pages/Profile';
 
 
 const HomeStack = createStackNavigator({
+  Home,
   Profile,
   Wait,
-  Home,
 }, {
   headerMode: "float",
 });

@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 });
 
 export default class Home extends Component {
-  static navigationOptions = _ => ({
+  static navigationOptions = ({ navigation: { navigate }}) => ({
     title: AppName,
     headerStyle: {
       backgroundColor: '#FFFFFF',
@@ -44,8 +44,9 @@ export default class Home extends Component {
         />,
     headerRight:
         <HeaderIcon
-          source={User}
           right
+          source={User}
+          onPress={_ => navigate("Profile")}
         />
   });
 

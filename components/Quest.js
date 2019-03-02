@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import SvgUri from 'react-native-svg-uri';
 import { Localization } from 'expo-localization';
 import { scale } from 'react-native-size-matters';
+import { withNavigation } from 'react-navigation';
 import { Text, View, StyleSheet, } from 'react-native';
 
 import TimeText from './TimeText';
@@ -80,7 +81,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class Quest extends Component {
+class Quest extends Component {
   static propTypes = {
     qType: PropTypes.number.isRequired,
     pType: PropTypes.number.isRequired,
@@ -88,7 +89,7 @@ export default class Quest extends Component {
   };
 
   render() {
-    const { qType, pType, start } = this.props;
+    const { qType, pType, start, navigation: { navigate }} = this.props;
 
     const q = qTypes[qType];
     const p = pTypes[pType];
@@ -143,8 +144,9 @@ export default class Quest extends Component {
             </Text>
           </ColButton>
           <ColButton
-            style={styles.button}
             color={secBut.color}
+            style={styles.button}
+            onPress={_ => navigate("Wait")}
           >
             <Text style={styles.buttonText} >
               {i18n.t(secBut.title)}
@@ -155,3 +157,5 @@ export default class Quest extends Component {
     );
   };
 };
+
+export default withNavigation(Quest);
