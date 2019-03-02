@@ -16,6 +16,7 @@ import mockUser from '../mocks/User';
 import close from '../assets/icons/close.svg';
 import WaitInfo from '../components/WaitInfo';
 import TimeText from '../components/TimeText';
+import { AppName, headerHeight } from '../Config';
 import UserThumbnail from '../components/UserThumbnail';
 
 const styles = StyleSheet.create({
@@ -52,6 +53,15 @@ const styles = StyleSheet.create({
 
 export default class Wait extends Component {
   static navigationOptions = {
+    title: AppName,
+    headerStyle: {
+      backgroundColor: '#FFFFFF',
+      height: scale(headerHeight),
+    },
+    headerTitleStyle: {
+      fontFamily: 'Quicksand-Bold',
+      fontSize: scale(22),
+    },
     header: null,
     gesturesEnabled: false,
   };
